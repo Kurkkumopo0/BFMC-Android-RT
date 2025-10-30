@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="mock_model_spinner">
+    <string-array name="mock_models">
         <item>Yolo11n.pt</item>
         <item>Yolo11s.pt</item>
         <item>Yolo8n.pt</item>

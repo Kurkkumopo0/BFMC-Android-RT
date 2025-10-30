@@ -62,27 +62,34 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
-            <Spinner
-                android:id="@+id/model_spinner"
-                android:layout_width="0dp"
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/dropdown_layout"
+                style="@style/dropdown"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="32dp"
-                android:layout_marginTop="48dp"
-                android:entries="@array/mock_model_spinner"
-                android:gravity="top"
-                android:paddingHorizontal="24dp"
-                android:paddingVertical="12dp"
-                android:spinnerMode="dialog"
+                android:layout_margin="32dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/card_text" />
+                app:layout_constraintTop_toBottomOf="@id/card_text">
+
+                <AutoCompleteTextView
+                    android:id="@+id/dropdown_text_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:fontFamily="sans-serif-condensed-medium"
+                    android:inputType="none"
+                    android:popupBackground="@color/primary_light"
+                    android:text="@string/dropdown_default" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
             <Button
                 android:id="@+id/card_button"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginHorizontal="12dp"
-                android:layout_marginBottom="32dp"
+                android:layout_margin="32dp"
                 android:backgroundTint="@color/primary"
                 android:text="@string/start_camera"
                 app:layout_constraintBottom_toBottomOf="parent"

@@ -3,5 +3,6 @@
     <string name="title">BFMC Object Detection</string>
     <string name="main_card_text">Select your model and start the app</string>
     <string name="start_camera">Start Inference</string>
+    <string name="dropdown_default">Select</string>
 
 </resources>
