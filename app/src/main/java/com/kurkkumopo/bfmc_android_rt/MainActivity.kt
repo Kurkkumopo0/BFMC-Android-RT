@@ -5,6 +5,7 @@ import android.widget.ArrayAdapter
 import android.widget.AutoCompleteTextView
 import android.widget.Toast
 import android.content.Context
+import android.content.Intent
 import android.content.pm.PackageManager
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
@@ -14,7 +15,7 @@ import com.kurkkumopo.bfmc_android_rt.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var viewBinding: ActivityMainBinding
-    private var selectedModel: String = ""
+    private var selectedModel: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,18 +56,27 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun startCamera() {
-        if (selectedModel=="") {
+        if (selectedModel.isNullOrEmpty()) {
             Toast.makeText(this, "Please select model", Toast.LENGTH_LONG).show()
             return
         }
-        // TODO: actually start camera
+        openCameraActivity()
     }
+
+    private fun openCameraActivity() {
+        val intent = Intent(this, CameraActivity::class.java)
+        intent.putExtra(MODEL, selectedModel)
+        startActivity(intent)
+    }
+
 
     private fun setModel(newModel: String) {
         selectedModel = newModel
     }
 
     companion object {
+        private const val TAG = "MainActivity"
+        const val MODEL = "model"
         private val REQUIRED_PERMISSIONS = mutableListOf (android.Manifest.permission.CAMERA).toTypedArray()
         fun hasPermissions(context: Context) = REQUIRED_PERMISSIONS.all {
             ContextCompat.checkSelfPermission(context, it) == PackageManager.PERMISSION_GRANTED
