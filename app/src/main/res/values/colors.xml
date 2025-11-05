@@ -1,9 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="background">#D7FFEA</color>
-    <color name="primary">#009688</color>
-    <color name="primary_light">#E2EBE9</color>
-    <color name="transparent_background">#EFFFFFFF</color>
+    <color name="primary">#00897B</color>
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="primaryContainer">#B2DFDB</color>
+    <color name="onPrimaryContainer">#004D40</color>
+
+    <color name="background">#BDD5C9</color>
+    <color name="onBackground">#1C1B1F</color>
+    <color name="surface">#F1F8F7</color>
+    <color name="onSurface">#1C1B1F</color>
+
+    <color name="surfaceVariant">#B2DFDB</color>
+    <color name="onSurfaceVariant">#37474F</color>
+    <color name="outline">#607D8B</color>
+
+    <color name="primary_dark">#00897B</color> <!-- TODO: Dark mode colors -->
+    <color name="onPrimary_dark">#FFFFFF</color>
+    <color name="primaryContainer_dark">#B2DFDB</color>
+    <color name="onPrimaryContainer_dark">#004D40</color>
+
+    <color name="background_dark">#BDD5C9</color>
+    <color name="onBackground_dark">#1C1B1F</color>
+    <color name="surface_dark">#F1F8F7</color>
+    <color name="onSurface_dark">#1C1B1F</color>
+
+    <color name="surfaceVariant_dark">#B2DFDB</color>
+    <color name="onSurfaceVariant_dark">#37474F</color>
+    <color name="outline_dark">#607D8B</color> <!-- TODO: End -->
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
 </resources>

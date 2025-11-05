@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/background"
+    android:background="?attr/android:colorBackground"
     android:orientation="horizontal"
     android:padding="24dp"
     tools:context=".MainActivity">
@@ -43,7 +43,6 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/white"
             android:padding="16dp">
 
             <TextView
@@ -80,7 +79,6 @@
                     android:layout_weight="1"
                     android:fontFamily="sans-serif-condensed-medium"
                     android:inputType="none"
-                    android:popupBackground="@color/primary_light"
                     android:text="@string/dropdown_default" />
 
             </com.google.android.material.textfield.TextInputLayout>
@@ -90,7 +88,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="32dp"
-                android:backgroundTint="@color/primary"
                 android:text="@string/start_camera"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
